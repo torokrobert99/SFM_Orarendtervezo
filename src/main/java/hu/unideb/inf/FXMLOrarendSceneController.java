@@ -15,7 +15,6 @@ public class FXMLOrarendSceneController {
 
     @FXML
     void handledLoginButtonPushed(ActionEvent event) {
-        System.out.println(passwordField.getText());
         /* adok pár sor kommentet a teszt kedvéért */
         /* így ni nagyon szép lesz*/
 

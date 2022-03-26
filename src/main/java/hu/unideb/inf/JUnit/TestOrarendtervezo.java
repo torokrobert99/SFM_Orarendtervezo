@@ -1,14 +1,15 @@
 package hu.unideb.inf.JUnit;
 
-import static org.junit.Assert.fail;
+/* import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
+import static org.junit.api.Assert.fail;
+
 
 public class TestOrarendtervezo{
     
-    @Test 
+    @Test
     void test() {
         fail("Not yet implemented");
     }
 
-}
+} */

@@ -17,33 +17,18 @@
     </properties>
 
     <dependencies>
-
+        <!-- JUnit -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.8.2</version>
         </dependency>
 
-
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.8.2</version>
         </dependency>
-
-
-<!--        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.8.2</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.8.2</version>
-        </dependency>-->
 
         <!-- JavaFX -->
         <dependency>
@@ -51,33 +36,16 @@
             <artifactId>javafx-controls</artifactId>
             <version>11</version>
         </dependency>
+        
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>11</version>
         </dependency>
-        <!-- JUnit -->
-      <!--   <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.8.2</version>
-            <scope>test</scope>
-        </dependency> -->
-<!--        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.8.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.8.2</version>
-            <scope>test</scope>
-        </dependency>-->
     </dependencies>
     <build>
         <plugins>
+
             <!-- JavaFX -->
             <plugin>
                 <groupId>org.openjfx</groupId>
@@ -87,6 +55,7 @@
                     <mainClass>hu.unideb.inf.Main</mainClass>
                 </configuration>
             </plugin>
+
             <!-- Mojo -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -103,6 +72,7 @@
                     <mainClass>hu.unideb.inf.Main</mainClass>
                 </configuration>
             </plugin>
+
             <!-- For JUnit -->
              <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

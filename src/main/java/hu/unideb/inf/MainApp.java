@@ -3,19 +3,30 @@ package hu.unideb.inf;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import java.io.IOException;
+import java.util.Objects;
 
 
 public class MainApp extends Application {
+    private static Stage stg;
 
     @Override
     public void start(Stage stage) throws Exception {
+        stg = stage;
         FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/FXMLOrarendScene.fxml"));
         Scene scene = new Scene(loader.load());
-        stage.setTitle("Orarendtervezo");
-        stage.setScene(scene);
-        stage.show();
+        stg.setTitle("Orarendtervezo");
+        stg.setScene(scene);
+        stg.show();
+    }
+
+
+    public void changeScene(String fxml) throws IOException {
+        Parent pane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxml)));
+        stg.getScene().setRoot(pane);
     }
 
     /**

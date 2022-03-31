@@ -8,6 +8,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
+import java.sql.SQLException;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import hu.unideb.inf.model.*;
+import org.h2.tools.Server;
 
 
 public class MainApp extends Application {
@@ -37,8 +44,27 @@ public class MainApp extends Application {
      *
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
+        startDatabase(); // start h2 database
         launch(args);
+        try (PersonDAO aDAO = new JpaPersonDAO();) { // JpaPersonDAO helyett FilePersonDAO ha szerializáció kell
+            Person a = new Person();
+            a.setName("Példa Péter");
+            a.setAge(21);
+            a.setGender(Person.GenderType.MALE);
+            // aDAO.savePerson(a); //kaszkádolás, lásd School.java
+
+            School school = new School();
+            school.setName("Debreceni Egyetem");
+            school.getPersons().add(a);
+            aDAO.saveSchool(school);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void startDatabase() throws SQLException {
+        new Server().runTool("-tcp", "-web", "-ifNotExists");
     }
 
 }

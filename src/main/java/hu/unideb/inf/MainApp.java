@@ -23,6 +23,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         stg = stage;
+        //new Server().runTool("-tcp", "-web", "-ifNotExists");
         FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/FXMLOrarendScene.fxml"));
         Scene scene = new Scene(loader.load());
         stg.setTitle("Orarendtervezo");
@@ -46,13 +47,12 @@ public class MainApp extends Application {
      */
     public static void main(String[] args) throws SQLException {
         startDatabase(); // start h2 database
-        launch(args);
         try (PersonDAO aDAO = new JpaPersonDAO();) { // JpaPersonDAO helyett FilePersonDAO ha szerializáció kell
             Person a = new Person();
             a.setName("Példa Péter");
             a.setAge(21);
             a.setGender(Person.GenderType.MALE);
-            // aDAO.savePerson(a); //kaszkádolás, lásd School.java
+            //aDAO.savePerson(a); //kaszkádolás, lásd School.java
 
             School school = new School();
             school.setName("Debreceni Egyetem");
@@ -61,10 +61,10 @@ public class MainApp extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        launch(args);
     }
 
     private static void startDatabase() throws SQLException {
         new Server().runTool("-tcp", "-web", "-ifNotExists");
     }
-
 }

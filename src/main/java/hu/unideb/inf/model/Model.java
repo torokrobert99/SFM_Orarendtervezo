@@ -9,6 +9,6 @@ public class Model {
 
     public Model()
     {
-        this.person = new Person("","");
+        this.person = new Person();
     }
 }

@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.FXMLOrarendSceneController">
    <children>
       <Button layoutX="226.0" layoutY="283.0" mnemonicParsing="false" onAction="#handledLoginButtonPushed" text="Login" />
-      <Button layoutX="315.0" layoutY="283.0" mnemonicParsing="false" onAction="#handledRegisterButtonPushed" text="Register" />
+      <Button fx:id="registerButton" layoutX="315.0" layoutY="283.0" mnemonicParsing="false" onAction="#handledRegisterButtonPushed" text="Register" />
       <Label layoutX="226.0" layoutY="168.0" prefHeight="17.0" prefWidth="149.0" text="Felhasználónév" />
       <Label layoutX="226.0" layoutY="215.0" prefHeight="17.0" prefWidth="149.0" text="Jelszó" />
       <TextField fx:id="usernameField" layoutX="226.0" layoutY="185.0" />

@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 
 public class TestOrarendtervezo{
-    
+    //próba Junit teszt
     @Test
     void test() {
         fail("Not yet implemented");

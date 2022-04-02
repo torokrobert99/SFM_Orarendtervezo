@@ -54,10 +54,11 @@ public class MainApp extends Application {
             a.setGender(Person.GenderType.MALE);
             //aDAO.savePerson(a); //kaszkádolás, lásd School.java
 
-            School school = new School();
+            /* School school = new School();
             school.setName("Debreceni Egyetem");
             school.getPersons().add(a);
-            aDAO.saveSchool(school);
+            aDAO.saveSchool(school); */
+            
         } catch (Exception e) {
             e.printStackTrace();
         }

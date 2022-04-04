@@ -12,7 +12,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class FXMLOrarendSceneController {
+public class FXMLOrarendSceneController
+{
 
     @FXML
     private PasswordField passwordField;
@@ -24,16 +25,24 @@ public class FXMLOrarendSceneController {
     private Button registerButton;
 
     @FXML
-    void handledLoginButtonPushed(ActionEvent event) {
+    void handledLoginButtonPushed(ActionEvent event)
+    {
         System.out.println("Hello world");
 
     }
 
     @FXML
-    void handledRegisterButtonPushed(ActionEvent event) throws IOException {
+    void handledRegisterButtonPushed(ActionEvent event) throws IOException
+    {
        MainApp m = new MainApp();
        m.changeScene("/fxml/FXMLRegisterScene.fxml");
 
+    }
+
+    boolean checkCredentials()
+    {
+        //TODO
+        return true;
     }
 
 }

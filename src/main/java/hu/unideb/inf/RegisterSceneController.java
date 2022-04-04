@@ -44,4 +44,15 @@ public class RegisterSceneController {
     void sendingButtonPushed(ActionEvent event) {
         
     }
+
+    void comparePasswords()
+    {
+        //TODO
+    }
+
+    boolean isUsernameTaken()
+    {
+        //TODO
+        return true;
+    }
 }

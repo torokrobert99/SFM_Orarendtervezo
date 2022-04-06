@@ -5,6 +5,7 @@ import hu.unideb.inf.model.Person;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 
@@ -15,22 +16,28 @@ public class RegisterSceneController {
     public void setModel(Model model) {this.model = model;}
 
     @FXML
+    private PasswordField confirmpasswordInRegister;
+
+    @FXML
     private Label errorMessage;
 
     @FXML
-    private TextField passwordAgainInRegister;
+    private TextField firstnameTextField;
 
     @FXML
-    private TextField passwordInRegister;
+    private PasswordField passwordInRegister;
 
     @FXML
-    private TextField usernameInRegister;
+    private TextField secondnameTextField;
 
     @FXML
     private RadioButton studentButton;
 
     @FXML
     private RadioButton teacherButton;
+
+    @FXML
+    private TextField usernameInRegister;
 
 
     @FXML

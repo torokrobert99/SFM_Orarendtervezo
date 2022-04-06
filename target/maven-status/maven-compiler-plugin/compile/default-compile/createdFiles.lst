@@ -1,0 +1,5 @@
+hu\unideb\inf\model\JpaStudentDAO.class
+hu\unideb\inf\model\JpaTeacherDAO.class
+hu\unideb\inf\model\StudentDAO.class
+hu\unideb\inf\model\Person$RoleType.class
+hu\unideb\inf\model\TeacherDAO.class

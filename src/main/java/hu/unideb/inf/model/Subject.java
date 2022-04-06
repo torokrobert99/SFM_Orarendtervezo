@@ -1,4 +1,6 @@
-package hu.unideb.inf.model;
+
+/** MÉG NEM KELL **/
+/*package hu.unideb.inf.model;
 
 import javax.persistence.Entity;
 import javax.persistence.*;
@@ -91,4 +93,4 @@ public class Subject {
         return "Subject{" +
                 "id=" + id;
     }
-}
+}*/

@@ -2,47 +2,29 @@ package hu.unideb.inf.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-public class Person implements Serializable {
-
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Person {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private int id;
+    @Column(name = "Name")
     private String name;
+    @Column(name = "Age")
     private int age;
+    //List<Student> listOfStudents = new ArrayList<>();
     @Enumerated(EnumType.STRING)
-    private GenderType gender;
+    private Person.RoleType role;
 
-    public enum GenderType{
-        MALE,FEMALE,NA
+    public enum RoleType{
+        STUDENT,TEACHER
     }
 
-    private String username;
-    private String password;
-    public String getUsername() {
-        return username;
-    }
 
-    public String getPassword() {
-        return password;
-    }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
 
     public int getId() {
         return id;
@@ -68,11 +50,11 @@ public class Person implements Serializable {
         this.age = age;
     }
 
-    public GenderType getGender() {
-        return gender;
+    public RoleType getRole() {
+        return role;
     }
 
-    public void setGender(GenderType gender) {
-        this.gender = gender;
+    public void setRole(RoleType role) {
+        this.role = role;
     }
 }

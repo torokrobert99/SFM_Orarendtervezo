@@ -1,17 +1,18 @@
-package hu.unideb.inf.model;
+
+/** MÉG NEM KELL **/
+/*package hu.unideb.inf.model;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+
 public class School {
-    @Id
-    @GeneratedValue
+
     private int id;
     private String name;
-    @OneToMany(cascade = CascadeType.ALL) //ez a kaszkádolás arra jó hogyha nem szerenénk mindent külön menteni (Person, School)
-    @JoinColumn(name="owner_School") //ez nem feltétlen kell de érdemes használni
+    //@OneToMany(cascade = CascadeType.ALL) //ez a kaszkádolás arra jó hogyha nem szerenénk mindent külön menteni (Person, School)
+    //@JoinColumn(name="owner_School") //ez nem feltétlen kell de érdemes használni
     private List<Person> persons =new ArrayList<>();
 
     public int getId() {
@@ -37,4 +38,4 @@ public class School {
     public void setPersons(List<Person> persons) {
         this.persons = persons;
     }
-}
+}*/

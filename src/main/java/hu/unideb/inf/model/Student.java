@@ -1,5 +1,23 @@
 package hu.unideb.inf.model;
+import javax.persistence.*;
+import java.io.Serializable;
+@Entity
+public class Student extends Person implements Serializable {
+    private String username;
+    private String password;
+    public String getUsername() {
+        return username;
+    }
 
-public class Student extends Person {
+    public String getPassword() {
+        return password;
+    }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

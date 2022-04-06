@@ -47,17 +47,33 @@ public class MainApp extends Application {
      */
     public static void main(String[] args) throws SQLException {
         startDatabase(); // start h2 database
-        try (PersonDAO aDAO = new JpaPersonDAO();) { // JpaPersonDAO helyett FilePersonDAO ha szerializáció kell
-            Person a = new Person();
+        try (JpaPersonDAO aDAO = new JpaPersonDAO();) { // JpaPersonDAO helyett FilePersonDAO ha szerializáció kell
+            Student a = new Student();
             a.setName("Példa Péter");
             a.setAge(21);
-            a.setGender(Person.GenderType.MALE);
-            //aDAO.savePerson(a); //kaszkádolás, lásd School.java
+            a.setRole(Person.RoleType.STUDENT);
+            a.setUsername("peldapeter99");
+            a.setPassword("alma123");
+            aDAO.savePerson(a); //kaszkádolás, lásd School.java
 
+            Student s = new Student();
+            s.setName("Gipsz Jakab");
+            s.setAge(22);
+            s.setRole(Person.RoleType.STUDENT);
+            aDAO.savePerson(s);
+
+            Teacher t = new Teacher();
+            t.setName("Kósa Márk");
+            t.setAge(50);
+            t.setRole(Person.RoleType.TEACHER);
+            t.setUsername("kosamark22");
+            t.setPassword("xddd");
+            aDAO.savePerson(t);
             /* School school = new School();
             school.setName("Debreceni Egyetem");
             school.getPersons().add(a);
             aDAO.saveSchool(school); */
+
             
         } catch (Exception e) {
             e.printStackTrace();

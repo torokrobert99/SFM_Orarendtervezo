@@ -1,55 +1,51 @@
-
-/** MÉG NEM KELL **/
-
-/*package hu.unideb.inf.model;
+package hu.unideb.inf.model;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
+import java.io.Serializable;
 import java.util.List;
 
-public class JpaSubjectDAO implements SubjectDAO {
+public class JpaStudentDAO implements StudentDAO{
 
-    private final EntityManagerFactory entityManagerFactory = Persistence
-            .createEntityManagerFactory("br.com.fredericci.pu");
+    private final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("br.com.fredericci.pu");
     private final EntityManager entityManager = entityManagerFactory.createEntityManager();
-
     @Override
-    public void saveSubject(Subject a) {
+    public void saveStudent(Student student) {
         entityManager.getTransaction().begin();
-        entityManager.persist(a);
+        entityManager.persist(student);
         entityManager.getTransaction().commit();
 
     }
 
     @Override
-    public void deleteSubject(Subject a) {
+    public void deleteStudent(Student student) {
         entityManager.getTransaction().begin();
-        entityManager.remove(a);
+        entityManager.remove(student);
         entityManager.getTransaction().commit();
 
     }
 
     @Override
-    public void updateSubject(Subject a) {
+    public void updateStudent(Student student) {
         entityManager.getTransaction().begin();
-        entityManager.persist(a);
+        entityManager.persist(student);
         entityManager.getTransaction().commit();
 
     }
 
     @Override
-    public List<Subject> getSubjects() {
-        TypedQuery<Subject> query = entityManager.createQuery(
-                "SELECT a FROM Subject a", Subject.class);
-        List<Subject> Subjects = query.getResultList();
-        return Subjects;
+    public List<Student> getStudents() {
+        TypedQuery<Student> query = entityManager.createQuery(
+                "SELECT a FROM Person a", Student.class);
+        List<Student> Students = query.getResultList();
+        return Students;
     }
 
+    @Override
     public void close() throws Exception {
         entityManager.close();
         entityManagerFactory.close();
     }
-
-} */
+}

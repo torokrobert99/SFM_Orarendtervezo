@@ -7,7 +7,7 @@ public interface PersonDAO extends AutoCloseable{
     public void deletePerson(Person a);
     public void updatePerson(Person a);
     public List<Person> getPersons();
-    public default void saveSchool(School school){
+    /*public default void saveSchool(School school){
         throw new UnsupportedOperationException();
-    }
+    }*/
 }

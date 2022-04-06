@@ -1,19 +1,12 @@
 package hu.unideb.inf.model;
 
-public class Teacher extends Person {
+import javax.persistence.Entity;
+import java.io.Serializable;
 
-    private String subject;
-    /* private String school; */
+@Entity
+public class Teacher extends Person implements Serializable {
     private String username;
     private String password;
-
-    public String getUsername() {
-        return username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
 
     public void setUsername(String username) {
         this.username = username;
@@ -23,20 +16,11 @@ public class Teacher extends Person {
         this.password = password;
     }
 
-    public String getSubject() {
-        return subject;
+    public String getUsername() {
+        return username;
     }
 
-    public void setSubject(String subject) {
-        this.subject = subject;
+    public String getPassword() {
+        return password;
     }
-
-/*     public String getSchool() {
-        return school;
-    }
-
-    public void setSchool(String school) {
-        this.school = school;
-    } */
-
 }

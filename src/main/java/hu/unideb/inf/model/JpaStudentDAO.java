@@ -38,7 +38,7 @@ public class JpaStudentDAO implements StudentDAO{
     @Override
     public List<Student> getStudents() {
         TypedQuery<Student> query = entityManager.createQuery(
-                "SELECT a FROM Person a", Student.class);
+                "SELECT a FROM Student a", Student.class);
         List<Student> Students = query.getResultList();
         return Students;
     }

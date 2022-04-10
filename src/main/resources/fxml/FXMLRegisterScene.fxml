@@ -5,6 +5,7 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
@@ -18,8 +19,11 @@
             <Label layoutX="237.0" layoutY="238.0" text="Jelszó ismét" />
             <Button layoutX="309.0" layoutY="355.0" mnemonicParsing="false" onAction="#cancelButtonPushed" text="Mégse" />
             <Label fx:id="errorMessage" layoutX="235.0" layoutY="325.0" prefHeight="17.0" prefWidth="124.0" text="Hiba üzenet helye" />
-            <RadioButton fx:id="teacherButton" layoutX="237.0" layoutY="293.0" mnemonicParsing="false" text="Tanár" />
-            <RadioButton fx:id="studentButton" layoutX="312.0" layoutY="293.0" mnemonicParsing="false" text="Diák" />
+            <RadioButton fx:id="teacherButton" layoutX="237.0" layoutY="293.0" mnemonicParsing="false" text="Tanár">
+               <toggleGroup>
+                  <ToggleGroup fx:id="role" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="studentButton" layoutX="312.0" layoutY="293.0" mnemonicParsing="false" selected="true" text="Diák" toggleGroup="$role" />
             <Button layoutX="227.0" layoutY="355.0" mnemonicParsing="false" onAction="#sendingButtonPushed" text="Küldés" />
             <PasswordField fx:id="passwordInRegister" layoutX="237.0" layoutY="197.0" prefHeight="25.0" prefWidth="121.0" />
             <PasswordField fx:id="confirmpasswordInRegister" layoutX="237.0" layoutY="255.0" prefHeight="25.0" prefWidth="121.0" />

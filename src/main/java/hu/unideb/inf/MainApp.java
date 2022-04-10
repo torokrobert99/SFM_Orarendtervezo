@@ -46,8 +46,8 @@ public class MainApp extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws SQLException {
-        startDatabase(); // start h2 database
-        try (JpaPersonDAO aDAO = new JpaPersonDAO();) { // JpaPersonDAO helyett FilePersonDAO ha szerializáció kell
+            startDatabase(); // start h2 database
+        /*  try (JpaPersonDAO aDAO = new JpaPersonDAO();) { // JpaPersonDAO helyett FilePersonDAO ha szerializáció kell
             Student a = new Student();
             a.setName("Példa Péter");
             a.setAge(21);
@@ -72,12 +72,12 @@ public class MainApp extends Application {
             /* School school = new School();
             school.setName("Debreceni Egyetem");
             school.getPersons().add(a);
-            aDAO.saveSchool(school); */
+            aDAO.saveSchool(school);
 
             
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        } */
         launch(args);
     }
 

@@ -36,7 +36,7 @@ public class JpaTeacherDAO implements TeacherDAO{
     @Override
     public List<Teacher> getTeachers() {
         TypedQuery<Teacher> query = entityManager.createQuery(
-                "SELECT a FROM Person a", Teacher.class);
+                "SELECT a FROM Teacher a", Teacher.class);
         List<Teacher> Teachers = query.getResultList();
         return Teachers;
     }

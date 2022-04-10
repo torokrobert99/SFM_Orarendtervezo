@@ -73,7 +73,7 @@ public class RegisterSceneController {
             personDAO.savePerson(registerStudent);
             changeSceneToAfterRegister();
         }
-        else if (teacherButton.isSelected()  && !checkPasswords && !checkFields)
+        else if (teacherButton.isSelected()  && !checkPasswords && !checkFields && !checkUsername)
         {
             Teacher registerTeacher = new Teacher();
             registerTeacher.setName(secondnameTextField.getText() + " " + firstnameTextField.getText());

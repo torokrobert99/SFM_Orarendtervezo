@@ -20,6 +20,7 @@ public class RegisterSceneController {
     JpaPersonDAO personDAO = new JpaPersonDAO();
     JpaTeacherDAO teacherDAO = new JpaTeacherDAO();
     JpaStudentDAO studentDAO = new JpaStudentDAO();
+    MainApp m = new MainApp();
 
     @FXML
     private PasswordField confirmpasswordInRegister;
@@ -51,7 +52,6 @@ public class RegisterSceneController {
      */
     @FXML
     void cancelButtonPushed(ActionEvent event) throws IOException {
-        MainApp m = new MainApp();
         m.changeScene("/fxml/FXMLOrarendScene.fxml");
 
     }
@@ -148,7 +148,7 @@ public class RegisterSceneController {
     }
 
     public void changeSceneToAfterRegister() throws IOException {
-        MainApp m = new MainApp();
+
         m.changeScene("/fxml/FXMLAfterRegisterScene.fxml");
 
     }

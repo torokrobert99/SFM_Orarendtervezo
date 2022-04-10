@@ -47,7 +47,6 @@ public class AfterRegisterSceneController implements Initializable {
      */
     public void backToLoginScene() throws IOException
     {
-        System.out.println("Hello");
         timeline = new Timeline(
                 new KeyFrame(Duration.seconds(5),actionEvent -> {
                     try {
@@ -58,8 +57,6 @@ public class AfterRegisterSceneController implements Initializable {
                 })
         );
         timeline.play();
-
-
     }
 }
 

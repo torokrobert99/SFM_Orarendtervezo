@@ -1,7 +1,0 @@
-{
-    "java.configuration.updateBuildConfiguration": "automatic"
-/*     "java.project.referencedLibraries": [
-        "/src/main/java/hu/unideb/inf/JUnit/lib.jar",
-        "/home/username/lib/foo.jar"
-    ] */
-}

@@ -87,7 +87,7 @@ public class FXMLOrarendSceneController {
                 validUser = true;
                 if (student.getPassword().equals(comparePassword)) {
                     compareUsername = student.getUsername();
-                    m.changeScene("/fxml/FXMLMenuSceneController.fxml");
+                    m.changeScene("/fxml/FXMLStudentMenuScene.fxml");
                 } else {
                     errorMessage.setText("Hibás jelszó!");
                 }
@@ -98,7 +98,7 @@ public class FXMLOrarendSceneController {
                 validUser = true;
                 if (teacher.getPassword().equals(comparePassword)) {
                     compareUsername = teacher.getUsername();
-                    m.changeScene("/fxml/FXMLMenuSceneController.fxml");
+                    m.changeScene("/fxml/FXMLTeacherMenuScene.fxml");
                 } else {
                     errorMessage.setText("Hibás jelszó!");
                 }

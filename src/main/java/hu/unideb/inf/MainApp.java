@@ -79,6 +79,8 @@ public class MainApp extends Application {
             e.printStackTrace();
         } */
         launch(args);
+
+        //valami
     }
 
     private static void startDatabase() throws SQLException {

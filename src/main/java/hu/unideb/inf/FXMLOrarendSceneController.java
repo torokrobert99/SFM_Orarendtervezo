@@ -88,8 +88,6 @@ public class FXMLOrarendSceneController {
                 if (student.getPassword().equals(comparePassword)) {
                     compareUsername = student.getUsername();
                     m.changeScene("/fxml/FXMLStudentMenuScene.fxml");
-                } else {
-                    errorMessage.setText("Hibás jelszó!");
                 }
             }
         }
@@ -99,13 +97,11 @@ public class FXMLOrarendSceneController {
                 if (teacher.getPassword().equals(comparePassword)) {
                     compareUsername = teacher.getUsername();
                     m.changeScene("/fxml/FXMLTeacherMenuScene.fxml");
-                } else {
-                    errorMessage.setText("Hibás jelszó!");
                 }
             }
         }
         if (!validUser) {
-            errorMessage.setText("A megadott felhasználónév/jelszó páros helytelen!");
+            errorMessage.setText("A megadott felhasználónév vagy jelszó helytelen!");
         }
         return compareUsername;
     }

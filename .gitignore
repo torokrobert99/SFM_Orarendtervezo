@@ -1,3 +1,4 @@
 target/
 .idea/
 .vscode/
+target/classes/hu/unideb/inf/FXMLOrarendSceneController.class

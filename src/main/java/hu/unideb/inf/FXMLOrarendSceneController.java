@@ -79,24 +79,34 @@ public class FXMLOrarendSceneController {
         MainApp m = new MainApp();
         boolean validUser = false;
         String compareUsername = usernameField.getText();
-        String comparePassword = passwordField.getText();
+        String providedPassword = passwordField.getText();
         List<Teacher> listOfTeachersToCompare = teacherDAO.getTeachers();
         List<Student> listOfStudentsToCompare = studentDAO.getStudents();
         for (Student student : listOfStudentsToCompare) {
             if (student.getUsername().equals(compareUsername)) {
                 validUser = true;
-                if (student.getPassword().equals(comparePassword)) {
-                    compareUsername = student.getUsername();
-                    m.changeScene("/fxml/FXMLStudentMenuScene.fxml");
+                String securePassword = student.getPassword();
+                String salt = student.getSalt();
+                boolean isPasswordCorrect = PasswordUtils.verifyUserPassword(providedPassword, securePassword, salt);
+                if (isPasswordCorrect) {
+                    m.changeScene("/fxml/FXMLStudentScene.fxml");
+                    return student.getUsername();
+                } else {
+                    errorMessage.setText("Hiba! A felhasználónév vagy a jelszó nem megfelelő!");
                 }
             }
         }
         for (Teacher teacher : listOfTeachersToCompare) {
             if (teacher.getUsername().equals(compareUsername)) {
                 validUser = true;
-                if (teacher.getPassword().equals(comparePassword)) {
-                    compareUsername = teacher.getUsername();
-                    m.changeScene("/fxml/FXMLTeacherMenuScene.fxml");
+                String securePassword = teacher.getPassword();
+                String salt = teacher.getSalt();
+                boolean isPasswordCorrect = PasswordUtils.verifyUserPassword(providedPassword, securePassword, salt);
+                if (isPasswordCorrect) {
+                    m.changeScene("/fxml/FXMLTeacherScene.fxml");
+                    return teacher.getUsername();
+                } else {
+                    errorMessage.setText("Hiba! A felhasználónév vagy a jelszó nem megfelelő!");
                 }
             }
         }

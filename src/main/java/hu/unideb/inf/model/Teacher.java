@@ -7,6 +7,7 @@ import java.io.Serializable;
 public class Teacher extends Person implements Serializable {
     private String username;
     private String password;
+    private String salt;
 
     public void setUsername(String username) {
         this.username = username;
@@ -16,11 +17,19 @@ public class Teacher extends Person implements Serializable {
         this.password = password;
     }
 
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
     public String getUsername() {
         return username;
     }
 
     public String getPassword() {
         return password;
+    }
+
+    public String getSalt() {
+        return salt;
     }
 }

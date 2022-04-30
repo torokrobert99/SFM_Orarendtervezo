@@ -64,12 +64,14 @@ public class RegisterSceneController {
         boolean checkFields = areTextFieldsEmpty();
         boolean checkPasswords = comparePasswords();
         boolean checkUsername = isUsernameTaken();
+        String salt = PasswordUtils.getSalt(30);
         if (studentButton.isSelected() && !checkPasswords && !checkFields && !checkUsername) {
             Student registerStudent = new Student();
             registerStudent.setName(secondnameTextField.getText() + " " + firstnameTextField.getText());
             registerStudent.setRole(Person.RoleType.STUDENT);
             registerStudent.setUsername(usernameInRegister.getText());
-            registerStudent.setPassword(passwordInRegister.getText());
+            registerStudent.setPassword(PasswordUtils.generateSecurePassword(passwordInRegister.getText(), salt));
+            registerStudent.setSalt(salt);
             personDAO.savePerson(registerStudent);
             changeSceneToAfterRegister();
         }
@@ -79,7 +81,8 @@ public class RegisterSceneController {
             registerTeacher.setName(secondnameTextField.getText() + " " + firstnameTextField.getText());
             registerTeacher.setRole(Person.RoleType.TEACHER);
             registerTeacher.setUsername(usernameInRegister.getText());
-            registerTeacher.setPassword(passwordInRegister.getText());
+            registerTeacher.setPassword(PasswordUtils.generateSecurePassword(passwordInRegister.getText(), salt));
+            registerTeacher.setSalt(salt);
             personDAO.savePerson(registerTeacher);
             changeSceneToAfterRegister();
 

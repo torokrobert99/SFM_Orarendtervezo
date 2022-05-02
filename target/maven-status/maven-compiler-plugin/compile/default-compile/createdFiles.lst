@@ -6,9 +6,9 @@ hu\unideb\inf\model\JpaTeacherDAO.class
 hu\unideb\inf\Main.class
 hu\unideb\inf\model\Person.class
 hu\unideb\inf\model\StudentDAO.class
+hu\unideb\inf\TeacherMenuController.class
 hu\unideb\inf\model\Person$RoleType.class
 hu\unideb\inf\model\Model.class
-hu\unideb\inf\JUnit\TestOrarendtervezo.class
 hu\unideb\inf\model\JpaStudentDAO.class
 hu\unideb\inf\model\TeacherDAO.class
 hu\unideb\inf\FXMLOrarendSceneController.class

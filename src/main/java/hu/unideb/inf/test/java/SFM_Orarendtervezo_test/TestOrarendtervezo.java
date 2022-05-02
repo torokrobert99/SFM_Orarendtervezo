@@ -1,4 +1,4 @@
-package hu.unideb.inf.test.java.SFM_Orarendtervezo_test;
+/*package hu.unideb.inf.test.java.SFM_Orarendtervezo_test;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -29,3 +29,4 @@ public class TestOrarendtervezo{
     }
 
 }
+*/

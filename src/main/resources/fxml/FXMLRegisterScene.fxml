@@ -1,37 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.RegisterSceneController">
    <center>
-      <AnchorPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <AnchorPane cache="true" focusTraversable="true" prefHeight="400.0" prefWidth="598.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="237.0" layoutY="124.0" text="Felhasználónév" />
-            <Label layoutX="237.0" layoutY="180.0" text="Jelszó" />
-            <TextField fx:id="usernameInRegister" layoutX="237.0" layoutY="141.0" prefHeight="25.0" prefWidth="121.0" />
-            <Label layoutX="237.0" layoutY="238.0" text="Jelszó ismét" />
-            <Button layoutX="309.0" layoutY="355.0" mnemonicParsing="false" onAction="#cancelButtonPushed" text="Mégse" />
-            <Label fx:id="errorMessage" layoutX="235.0" layoutY="325.0" prefHeight="17.0" prefWidth="124.0" text="Hiba üzenet helye" />
-            <RadioButton fx:id="teacherButton" layoutX="237.0" layoutY="293.0" mnemonicParsing="false" text="Tanár">
+            <Label layoutX="97.0" layoutY="155.0" text="Felhasználónév">
+               <font>
+                  <Font name="Book Antiqua" size="14.0" />
+               </font></Label>
+            <Label layoutX="97.0" layoutY="211.0" text="Jelszó">
+               <font>
+                  <Font name="Book Antiqua" size="14.0" />
+               </font></Label>
+            <TextField fx:id="usernameInRegister" layoutX="97.0" layoutY="172.0" prefHeight="25.0" prefWidth="121.0" />
+            <Label layoutX="97.0" layoutY="269.0" text="Jelszó ismét">
+               <font>
+                  <Font name="Book Antiqua" size="14.0" />
+               </font></Label>
+            <Button layoutX="449.0" layoutY="313.0" mnemonicParsing="false" onAction="#cancelButtonPushed" prefHeight="41.0" prefWidth="75.0" text="Mégse">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow height="0.0" radius="0.0" width="0.0" />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Book Antiqua" size="14.0" />
+               </font></Button>
+            <Label fx:id="errorMessage" layoutX="343.0" layoutY="189.0" prefHeight="23.0" prefWidth="211.0" text="Hiba üzenet helye">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font></Label>
+            <RadioButton fx:id="teacherButton" layoutX="97.0" layoutY="324.0" mnemonicParsing="false" text="Tanár">
                <toggleGroup>
                   <ToggleGroup fx:id="role" />
-               </toggleGroup></RadioButton>
-            <RadioButton fx:id="studentButton" layoutX="312.0" layoutY="293.0" mnemonicParsing="false" selected="true" text="Diák" toggleGroup="$role" />
-            <Button layoutX="227.0" layoutY="355.0" mnemonicParsing="false" onAction="#sendingButtonPushed" text="Küldés" />
-            <PasswordField fx:id="passwordInRegister" layoutX="237.0" layoutY="197.0" prefHeight="25.0" prefWidth="121.0" />
-            <PasswordField fx:id="confirmpasswordInRegister" layoutX="237.0" layoutY="255.0" prefHeight="25.0" prefWidth="121.0" />
-            <TextField fx:id="secondnameTextField" layoutX="239.0" layoutY="37.0" prefHeight="25.0" prefWidth="118.0" />
-            <TextField fx:id="firstnameTextField" layoutX="237.0" layoutY="88.0" prefHeight="25.0" prefWidth="120.0" />
-            <Label layoutX="239.0" layoutY="20.0" text="Vezetéknév" />
-            <Label layoutX="239.0" layoutY="71.0" text="Keresztnév" />
+               </toggleGroup>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Book Antiqua" size="14.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="studentButton" layoutX="172.0" layoutY="324.0" mnemonicParsing="false" selected="true" text="Diák" toggleGroup="$role">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Book Antiqua" size="14.0" />
+               </font></RadioButton>
+            <Button layoutX="300.0" layoutY="313.0" mnemonicParsing="false" onAction="#sendingButtonPushed" prefHeight="41.0" prefWidth="75.0" text="Küldés">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow height="0.0" radius="0.0" width="0.0" />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Book Antiqua" size="14.0" />
+               </font></Button>
+            <PasswordField fx:id="passwordInRegister" layoutX="97.0" layoutY="228.0" prefHeight="25.0" prefWidth="121.0" />
+            <PasswordField fx:id="confirmpasswordInRegister" layoutX="97.0" layoutY="286.0" prefHeight="25.0" prefWidth="121.0" />
+            <TextField fx:id="secondnameTextField" layoutX="99.0" layoutY="77.0" prefHeight="25.0" prefWidth="118.0" />
+            <TextField fx:id="firstnameTextField" layoutX="97.0" layoutY="119.0" prefHeight="25.0" prefWidth="120.0" />
+            <Label layoutX="95.0" layoutY="60.0" text="Vezetéknév">
+               <font>
+                  <Font name="Book Antiqua" size="14.0" />
+               </font></Label>
+            <Label layoutX="99.0" layoutY="102.0" prefHeight="18.0" prefWidth="79.0" text="Keresztnév">
+               <font>
+                  <Font name="Book Antiqua" size="14.0" />
+               </font></Label>
          </children>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
       </AnchorPane>
    </center>
+   <effect>
+      <SepiaTone />
+   </effect>
 </BorderPane>

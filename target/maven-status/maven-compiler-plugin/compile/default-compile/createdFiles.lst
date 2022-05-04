@@ -6,8 +6,10 @@ hu\unideb\inf\model\JpaTeacherDAO.class
 hu\unideb\inf\Main.class
 hu\unideb\inf\model\Person.class
 hu\unideb\inf\model\StudentDAO.class
+hu\unideb\inf\RegisterSceneController.class
 hu\unideb\inf\TeacherMenuController.class
 hu\unideb\inf\model\Person$RoleType.class
+hu\unideb\inf\MainApp.class
 hu\unideb\inf\model\Model.class
 hu\unideb\inf\model\JpaStudentDAO.class
 hu\unideb\inf\model\TeacherDAO.class

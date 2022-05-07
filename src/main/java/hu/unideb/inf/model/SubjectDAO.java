@@ -1,6 +1,5 @@
 
-/** MÉG NEM KELL **/
-/*package hu.unideb.inf.model;
+package hu.unideb.inf.model;
 
 import java.util.List;
 
@@ -9,4 +8,4 @@ public interface SubjectDAO {
     public void deleteSubject(Subject a);
     public void updateSubject(Subject a);
     public List<Subject> getSubjects();
-}*/
+}

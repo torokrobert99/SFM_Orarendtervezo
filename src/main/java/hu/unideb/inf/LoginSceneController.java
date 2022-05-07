@@ -3,20 +3,21 @@ package hu.unideb.inf;
 import hu.unideb.inf.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class FXMLOrarendSceneController {
+public class LoginSceneController implements Initializable {
     private Model model;
+    Parent root;
 
     public void setModel(Model model) {
         this.model = model;
@@ -26,6 +27,7 @@ public class FXMLOrarendSceneController {
     JpaTeacherDAO teacherDAO = new JpaTeacherDAO();
     JpaStudentDAO studentDAO = new JpaStudentDAO();
     MainApp m = new MainApp();
+
 
     @FXML
     private Label errorMessage;
@@ -39,6 +41,14 @@ public class FXMLOrarendSceneController {
     @FXML
     private Button registerButton;
 
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        //TODO
+
+    }
+
     /**
      * Ez a belépő gomb, ami továbbit a Menühöz ha a feltételek megfelelnek.
      */
@@ -49,7 +59,10 @@ public class FXMLOrarendSceneController {
         if (checkFields) {
             errorMessage.setText("Hiba! A fenti mezők kitöltése kötelező!");
         } else {
+
             loginAttempt();
+
+
         }
 
     }
@@ -87,7 +100,8 @@ public class FXMLOrarendSceneController {
                 validUser = true;
                 if (student.getPassword().equals(comparePassword)) {
                     compareUsername = student.getUsername();
-                    m.changeScene("/fxml/FXMLStudentMenuScene.fxml");
+                    Container.currentActivePerson = student;
+                    m.changeScene("/fxml/FXMLMenuScene.fxml");
                 }
             }
         }
@@ -96,7 +110,8 @@ public class FXMLOrarendSceneController {
                 validUser = true;
                 if (teacher.getPassword().equals(comparePassword)) {
                     compareUsername = teacher.getUsername();
-                    m.changeScene("/fxml/FXMLTeacherMenuScene.fxml");
+                    Container.currentActivePerson = teacher;
+                    m.changeScene("/fxml/FXMLMenuScene.fxml");
                 }
             }
         }

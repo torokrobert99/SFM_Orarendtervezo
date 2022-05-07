@@ -1,12 +1,10 @@
 package hu.unideb.inf;
 import javafx.animation.KeyFrame;
-import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -26,7 +24,7 @@ public class AfterRegisterSceneController implements Initializable {
     @FXML
     void backToLoginButtonPushed(ActionEvent event) throws IOException {
         timeline.stop();
-        m.changeScene("/fxml/FXMLOrarendScene.fxml");
+        m.changeScene("/fxml/FXMLLoginScene.fxml");
     }
 
     /**
@@ -50,7 +48,7 @@ public class AfterRegisterSceneController implements Initializable {
         timeline = new Timeline(
                 new KeyFrame(Duration.seconds(5),actionEvent -> {
                     try {
-                        m.changeScene("/fxml/FXMLOrarendScene.fxml");
+                        m.changeScene("/fxml/FXMLLoginScene.fxml");
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

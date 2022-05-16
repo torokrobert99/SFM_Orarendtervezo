@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.AddSubjectScene">
+   <children>
+      <TextField fx:id="subjectName" layoutX="47.0" layoutY="124.0" />
+      <TextField fx:id="creditValue" layoutX="222.0" layoutY="124.0" />
+      <Label layoutX="47.0" layoutY="101.0" text="Tárgynév">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="222.0" layoutY="101.0" text="Kredit">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="errorMessage" layoutX="57.0" layoutY="168.0" text="ErrorMessage" />
+      <Button layoutX="51.0" layoutY="201.0" mnemonicParsing="false" onAction="#addButtonPushed" text="Hozzáadás">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow height="0.0" radius="0.0" width="0.0" />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="162.0" layoutY="201.0" mnemonicParsing="false" onAction="#cancelButtonPushed" text="Mégse">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow height="0.0" radius="0.0" width="0.0" />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+   </children>
+   <effect>
+      <SepiaTone />
+   </effect>
+</AnchorPane>

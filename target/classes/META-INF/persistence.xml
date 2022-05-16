@@ -9,6 +9,8 @@
         <class>hu.unideb.inf.model.Student</class>
         <class>hu.unideb.inf.model.Student</class>
         <class>hu.unideb.inf.model.Teacher</class>
+        <class>hu.unideb.inf.model.Subject</class>
+        <class>hu.unideb.inf.model.SubjectGroups</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>

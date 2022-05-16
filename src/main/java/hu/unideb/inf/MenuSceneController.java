@@ -2,9 +2,11 @@ package hu.unideb.inf;
 
 import hu.unideb.inf.model.Container;
 import hu.unideb.inf.model.Person;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 import java.io.IOException;
@@ -19,6 +21,9 @@ public class MenuSceneController implements Initializable {
 
     @FXML
     private Label role;
+    @FXML
+    private Button exitButton;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -32,7 +37,7 @@ public class MenuSceneController implements Initializable {
 
     @FXML
     void exitButtonPushed(ActionEvent event) {
-
+        exitButton.setOnAction(actionEvent -> Platform.exit());
     }
 
     @FXML
@@ -41,8 +46,8 @@ public class MenuSceneController implements Initializable {
     }
 
     @FXML
-    void listSubjectButtonPushed(ActionEvent event) {
-
+    void addGroupToSubjectButtonPushed(ActionEvent event) throws IOException {
+        m.changeScene("/fxml/FXMLAddGroupScene.fxml");
     }
 
     @FXML

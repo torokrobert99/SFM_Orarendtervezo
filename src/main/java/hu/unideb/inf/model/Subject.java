@@ -4,6 +4,8 @@ package hu.unideb.inf.model;
 
 import javax.persistence.Entity;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Subject {
@@ -11,12 +13,30 @@ public class Subject {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    @Column
     private String subjectName;
-    @Column
     private int credit;
-    @Column
-    private String teacherName;
+    private String targyfelelos;
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    @JoinColumn(name = "subject_id")
+    private List<SubjectGroups> groups = new ArrayList<>();
+
+
+    public List<SubjectGroups> getGroups() {
+        return groups;
+    }
+
+    public void setGroups(SubjectGroups group) {
+        groups.add(group);
+    }
+
+
+
+    public String getTargyfelelos() {return targyfelelos;}
+
+    public void setTargyfelelos(String targyfelelos) {this.targyfelelos = targyfelelos;}
 
     public int getId() {
         return id;
@@ -40,14 +60,6 @@ public class Subject {
 
     public void setCredit(int credit) {
         this.credit = credit;
-    }
-
-    public String getTeacherId() {
-        return teacherName;
-    }
-
-    public void setTeacherId(String teacherName) {
-        this.teacherName= teacherName;
     }
 
 }

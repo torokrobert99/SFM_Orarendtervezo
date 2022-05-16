@@ -1,16 +1,16 @@
 package hu.unideb.inf.model;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Teacher extends Person implements Serializable {
     private String username;
     private String password;
-   // private List<Subject> taughtSubjectsByThisTeacher = new ArrayList<>();
-
     public void setUsername(String username) {
         this.username = username;
     }

@@ -23,7 +23,7 @@ public class LoginSceneController implements Initializable {
         this.model = model;
     }
 
-    JpaPersonDAO personDAO = new JpaPersonDAO();
+    //JpaPersonDAO personDAO = new JpaPersonDAO();
     JpaTeacherDAO teacherDAO = new JpaTeacherDAO();
     JpaStudentDAO studentDAO = new JpaStudentDAO();
     MainApp m = new MainApp();
@@ -100,7 +100,6 @@ public class LoginSceneController implements Initializable {
                 validUser = true;
                 if (student.getPassword().equals(comparePassword)) {
                     compareUsername = student.getUsername();
-                    Container.currentActivePerson = student;
                     m.changeScene("/fxml/FXMLMenuScene.fxml");
                 }
             }

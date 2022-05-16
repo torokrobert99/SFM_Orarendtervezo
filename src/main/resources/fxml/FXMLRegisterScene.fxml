@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.effect.Light.Distant?>
@@ -32,7 +33,7 @@
                <font>
                   <Font name="Book Antiqua" size="14.0" />
                </font></Label>
-            <Button layoutX="449.0" layoutY="313.0" mnemonicParsing="false" onAction="#cancelButtonPushed" prefHeight="41.0" prefWidth="75.0" text="Mégse">
+            <Button layoutX="435.0" layoutY="291.0" mnemonicParsing="false" onAction="#cancelButtonPushed" prefHeight="41.0" prefWidth="75.0" text="Mégse">
                <effect>
                   <Lighting>
                      <bumpInput>
@@ -46,10 +47,6 @@
                <font>
                   <Font name="Book Antiqua" size="14.0" />
                </font></Button>
-            <Label fx:id="errorMessage" layoutX="343.0" layoutY="189.0" prefHeight="23.0" prefWidth="211.0" text="Hiba üzenet helye">
-               <font>
-                  <Font name="Book Antiqua" size="18.0" />
-               </font></Label>
             <RadioButton fx:id="teacherButton" layoutX="97.0" layoutY="324.0" mnemonicParsing="false" text="Tanár">
                <toggleGroup>
                   <ToggleGroup fx:id="role" />
@@ -81,7 +78,7 @@
                <font>
                   <Font name="Book Antiqua" size="14.0" />
                </font></RadioButton>
-            <Button layoutX="300.0" layoutY="313.0" mnemonicParsing="false" onAction="#sendingButtonPushed" prefHeight="41.0" prefWidth="75.0" text="Küldés">
+            <Button layoutX="313.0" layoutY="291.0" mnemonicParsing="false" onAction="#sendingButtonPushed" prefHeight="41.0" prefWidth="75.0" text="Küldés">
                <effect>
                   <Lighting>
                      <bumpInput>
@@ -107,6 +104,29 @@
                <font>
                   <Font name="Book Antiqua" size="14.0" />
                </font></Label>
+            <RadioButton layoutX="290.0" layoutY="258.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="290.0" text="*Elfogadom a felhasználási feltételeket. ">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </RadioButton>
+            <Label fx:id="errorMessage1" layoutX="330.0" layoutY="78.0" prefHeight="23.0" prefWidth="211.0" text="Hiba üzenet helye">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="313.0" layoutY="343.0" text="A * -gal jelölt mező kitöltése kötelező" />
+            <TextArea layoutX="290.0" layoutY="150.0" prefHeight="96.0" prefWidth="265.0" text="Kérjük, hogy csak akkor vegye igénybe &#10;szolgáltatásainkat amennyiben az &#10;Általános Szerződési Feltételek minden &#10;pontjában egyetért, és kötelező érvényűnek&#10;tekinti magára nézve. ">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextArea>
          </children>
          <cursor>
             <Cursor fx:constant="TEXT" />

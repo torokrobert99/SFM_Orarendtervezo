@@ -41,7 +41,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.TargyfelvetelController">
    <children>
       <Label alignment="CENTER" prefHeight="35.0" prefWidth="659.0" text="Tárgyfelvétel">
          <font>
@@ -61,7 +61,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+            <ListView fx:id="subjectList" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
             <Label alignment="BOTTOM_LEFT" prefHeight="56.0" prefWidth="224.0" text="Tárgy:">
                <font>
                   <Font size="22.0" />
@@ -72,20 +72,20 @@
                   <Font size="22.0" />
                </font>
             </Label>
-            <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ListView fx:id="timestampList" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ListView fx:id="mySubjectsList" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <Label alignment="BOTTOM_LEFT" prefHeight="126.0" prefWidth="213.0" text="Saját tárgyaim:" GridPane.columnIndex="2">
                <font>
                   <Font size="22.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" prefHeight="97.0" prefWidth="214.0" text="Felvesz" GridPane.rowIndex="2">
+            <Button fx:id="felveszButton" mnemonicParsing="false" onAction="#felveszButtonPushed" prefHeight="97.0" prefWidth="214.0" text="Felvesz" GridPane.rowIndex="2">
                <font>
                   <Font size="22.0" />
                </font>
             </Button>
             <Label prefHeight="90.0" prefWidth="214.0" text="DEV NOTE: kiválasztott tárgy esetén megjelennek az elérhető időpontok, felvesz gombal átmegy a saját tárgyaimhoz. saját tárgy csak nevet ír, de tárolja az időpontot is ID szerint." wrapText="true" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="155.0" prefWidth="392.0" text="Vissza a főmenübe" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="155.0" prefWidth="392.0" text="Vissza a főmenübe" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>

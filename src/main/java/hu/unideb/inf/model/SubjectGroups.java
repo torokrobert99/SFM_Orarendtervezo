@@ -10,6 +10,7 @@ public class SubjectGroups {
     @Id
     @GeneratedValue
     private int id;
+
     @ManyToOne
     private Subject subject;
     private String oktato;
@@ -39,6 +40,12 @@ public class SubjectGroups {
     public void setIdopont(int idopont) {
         this.idopont = idopont;
     }
+
+    public Subject getSubject() {return subject;}
+
+    public void setSubject(Subject subject) {this.subject = subject;}
+
+
 
 
 }

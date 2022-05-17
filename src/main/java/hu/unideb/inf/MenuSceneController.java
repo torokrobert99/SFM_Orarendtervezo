@@ -66,8 +66,8 @@ public class MenuSceneController implements Initializable {
     }
 
     @FXML
-    void targyFelvetelButtonPushed(ActionEvent event) {
-
+    void targyFelvetelButtonPushed(ActionEvent event) throws IOException {
+            m.changeScene("/fxml/FXMLTargyfelvetelScene.fxml");
     }
 
     void displayName()

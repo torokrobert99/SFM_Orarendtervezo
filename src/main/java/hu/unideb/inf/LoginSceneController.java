@@ -100,6 +100,7 @@ public class LoginSceneController implements Initializable {
                 validUser = true;
                 if (student.getPassword().equals(comparePassword)) {
                     compareUsername = student.getUsername();
+                    Container.currentActivePerson = student;
                     m.changeScene("/fxml/FXMLMenuScene.fxml");
                 }
             }

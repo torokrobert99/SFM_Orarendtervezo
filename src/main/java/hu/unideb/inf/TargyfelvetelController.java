@@ -15,11 +15,13 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.StringTokenizer;
 
 public class TargyfelvetelController implements Initializable {
     MainApp m = new MainApp();
 
     JpaSubjectDAO subjectDAO = new JpaSubjectDAO();
+    JpaMySubjectsDAO MysubjectsDAO = new JpaMySubjectsDAO();
     JpaSubjectGroupDAO subjectGroupDAO = new JpaSubjectGroupDAO();
     final String[] currentSubject = new String[1];
     final String[] currentGroup = new String[1];
@@ -46,8 +48,13 @@ public class TargyfelvetelController implements Initializable {
 
     @FXML
     void felveszButtonPushed(ActionEvent event) throws IOException {
-        System.out.println(currentSubject[0] + " " + currentGroup[0]);
-        //TODO
+        MySubjects felvettTargy = new MySubjects();
+        felvettTargy.setStudent_id(Container.currentActivePerson.getId());
+        felvettTargy.setSubject(currentSubject[0]);
+        String[]tokens = currentGroup[0].split(" ");
+        felvettTargy.setNap(tokens[0]);
+        felvettTargy.setOra(tokens[1]);
+        MysubjectsDAO.saveMySubjects(felvettTargy);
     }
 
     @Override
@@ -82,16 +89,5 @@ public class TargyfelvetelController implements Initializable {
 
                 }
         );
-
-
-
-
-        /*for (SubjectGroups subjectGroups : times) {
-
-            if (subjectGroups.getSubject().getSubjectName()=="")
-            {
-                subjectList.getItems().add(subjectGroups.getNap() + " " + subjectGroups.getIdopont());
-            }
-        }*/
     }
 }

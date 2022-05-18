@@ -18,6 +18,7 @@ hu\unideb\inf\model\SubjectGroups.class
 hu\unideb\inf\model\JpaTeacherDAO.class
 hu\unideb\inf\model\Person.class
 hu\unideb\inf\model\StudentDAO.class
+hu\unideb\inf\MySubjectListController.class
 hu\unideb\inf\model\JpaSubjectDAO.class
 hu\unideb\inf\model\Person$RoleType.class
 hu\unideb\inf\model\SubjectDAO.class

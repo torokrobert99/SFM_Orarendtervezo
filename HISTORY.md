@@ -43,10 +43,12 @@
 >commit: a5de13b4a7b2398979fcce3931d3918a46ce7698
 
 ![img9](./screenshots/img9.png)
+![img10](./screenshots/img10.png)
+![img11](./screenshots/img11.png)
 
 ## czegenypatrik - 2022, May 13, 8:18 PM GMT+2
 ### Tárgyfelvétel Scene skeletonjának elkészítése.
 >commit: c19d51ab149ef0b285c25a7dc3bce1fc20330dd1
 
-![img9](./screenshots/img9.png)
+![img12](./screenshots/img12.png)
 

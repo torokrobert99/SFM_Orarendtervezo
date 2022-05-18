@@ -3,21 +3,20 @@ package hu.unideb.inf;
 import hu.unideb.inf.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.List;
-import java.util.ResourceBundle;
 
-public class LoginSceneController implements Initializable {
+public class FXMLOrarendSceneController {
     private Model model;
-    Parent root;
 
     public void setModel(Model model) {
         this.model = model;
@@ -27,7 +26,6 @@ public class LoginSceneController implements Initializable {
     JpaTeacherDAO teacherDAO = new JpaTeacherDAO();
     JpaStudentDAO studentDAO = new JpaStudentDAO();
     MainApp m = new MainApp();
-
 
     @FXML
     private Label errorMessage;
@@ -41,14 +39,6 @@ public class LoginSceneController implements Initializable {
     @FXML
     private Button registerButton;
 
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        //TODO
-
-    }
-
     /**
      * Ez a belépő gomb, ami továbbit a Menühöz ha a feltételek megfelelnek.
      */
@@ -59,10 +49,7 @@ public class LoginSceneController implements Initializable {
         if (checkFields) {
             errorMessage.setText("Hiba! A fenti mezők kitöltése kötelező!");
         } else {
-
             loginAttempt();
-
-
         }
 
     }
@@ -100,8 +87,7 @@ public class LoginSceneController implements Initializable {
                 validUser = true;
                 if (student.getPassword().equals(comparePassword)) {
                     compareUsername = student.getUsername();
-                    Container.currentActivePerson = student;
-                    m.changeScene("/fxml/FXMLMenuScene.fxml");
+                    m.changeScene("/fxml/FXMLStudentMenuScene.fxml");
                 }
             }
         }
@@ -110,8 +96,7 @@ public class LoginSceneController implements Initializable {
                 validUser = true;
                 if (teacher.getPassword().equals(comparePassword)) {
                     compareUsername = teacher.getUsername();
-                    Container.currentActivePerson = teacher;
-                    m.changeScene("/fxml/FXMLMenuScene.fxml");
+                    m.changeScene("/fxml/FXMLTeacherMenuScene.fxml");
                 }
             }
         }

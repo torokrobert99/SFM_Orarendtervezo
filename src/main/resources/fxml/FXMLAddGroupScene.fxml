@@ -4,20 +4,111 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.AddGroupToSubjectController">
    <children>
-      <Label layoutX="189.0" layoutY="107.0" text="Válasz egy tárgyat:" />
-      <Label layoutX="189.0" layoutY="147.0" text="Oktató:" />
-      <TextField fx:id="lecturer" layoutX="321.0" layoutY="143.0" />
-      <Label layoutX="189.0" layoutY="189.0" text="Nap:" />
-      <Label layoutX="188.0" layoutY="224.0" text="Óra kezdete:" />
-      <Button layoutX="188.0" layoutY="272.0" mnemonicParsing="false" onAction="#addGroupButtonPushed" text="Hozzáadás" />
-      <Button layoutX="306.0" layoutY="272.0" mnemonicParsing="false" onAction="#cancelGroupButtonPushed" text="Mégse" />
-      <ChoiceBox fx:id="subjectMenu" layoutX="321.0" layoutY="103.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="daysMenu" layoutX="321.0" layoutY="185.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="timesMenu" layoutX="321.0" layoutY="229.0" prefWidth="150.0" />
-      <Label fx:id="errorMessage" layoutX="225.0" layoutY="327.0" text="Error Message" />
+      <Label layoutX="161.0" layoutY="105.0" text="Válasz egy tárgyat:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="161.0" layoutY="145.0" text="Oktató:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="lecturer" layoutX="293.0" layoutY="141.0">
+         <effect>
+            <Lighting diffuseConstant="1.34" specularConstant="0.0" specularExponent="0.0" surfaceScale="2.07">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></TextField>
+      <Label layoutX="161.0" layoutY="187.0" text="Nap:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="160.0" layoutY="222.0" text="Óra kezdete:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button layoutX="196.0" layoutY="285.0" mnemonicParsing="false" onAction="#addGroupButtonPushed" text="Hozzáadás">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow height="0.0" radius="0.0" width="0.0" />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="322.0" layoutY="285.0" mnemonicParsing="false" onAction="#cancelGroupButtonPushed" text="Mégse">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow height="0.0" radius="0.0" width="0.0" />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <ChoiceBox fx:id="subjectMenu" layoutX="293.0" layoutY="101.0" prefWidth="150.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow height="0.0" radius="0.0" width="0.0" />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></ChoiceBox>
+      <ChoiceBox fx:id="daysMenu" layoutX="293.0" layoutY="183.0" prefWidth="150.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow height="0.0" radius="0.0" width="0.0" />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></ChoiceBox>
+      <ChoiceBox fx:id="timesMenu" layoutX="293.0" layoutY="227.0" prefWidth="150.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow height="0.0" radius="0.0" width="0.0" />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></ChoiceBox>
+      <Label fx:id="errorMessage" layoutX="255.0" layoutY="346.0" text="Error Message" />
+      <Label layoutX="194.0" layoutY="37.0" text="Csoport hozzáadása">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
+   <effect>
+      <SepiaTone />
+   </effect>
 </AnchorPane>

@@ -1,4 +1,7 @@
-package hu.unideb.inf.model;
+
+/** MÉG NEM KELL **/
+
+/*package hu.unideb.inf.model;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -49,4 +52,4 @@ public class JpaSubjectDAO implements SubjectDAO {
         entityManagerFactory.close();
     }
 
-}
+} */

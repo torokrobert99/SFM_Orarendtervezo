@@ -9,7 +9,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 import java.sql.SQLException;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
+import hu.unideb.inf.model.*;
 import org.h2.tools.Server;
 
 
@@ -20,7 +24,7 @@ public class MainApp extends Application {
     public void start(Stage stage) throws Exception {
         stg = stage;
         //new Server().runTool("-tcp", "-web", "-ifNotExists");
-        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/FXMLLoginScene.fxml"));
+        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/FXMLOrarendScene.fxml"));
         Scene scene = new Scene(loader.load());
         stg.setTitle("Orarendtervezo");
         stg.setScene(scene);

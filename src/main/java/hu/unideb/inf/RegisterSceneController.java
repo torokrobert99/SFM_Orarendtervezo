@@ -1,14 +1,17 @@
 package hu.unideb.inf;
 
 import hu.unideb.inf.model.*;
+import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.util.Duration;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 public class RegisterSceneController {
@@ -49,7 +52,7 @@ public class RegisterSceneController {
      */
     @FXML
     void cancelButtonPushed(ActionEvent event) throws IOException {
-        m.changeScene("/fxml/FXMLLoginScene.fxml");
+        m.changeScene("/fxml/FXMLOrarendScene.fxml");
 
     }
 

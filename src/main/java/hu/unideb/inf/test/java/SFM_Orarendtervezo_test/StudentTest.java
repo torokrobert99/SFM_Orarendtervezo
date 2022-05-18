@@ -6,7 +6,7 @@ import hu.unideb.inf.model.Student;
 import hu.unideb.inf.model.Person;
 
 
-public class TestStudent {
+public class StudentTest {
 
     @Test
     public void testStudent() {

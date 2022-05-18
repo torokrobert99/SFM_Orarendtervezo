@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import hu.unideb.inf.model.MySubjects;
 
 
-public class TestMySubjects {
+public class MySubjectsTest {
 
     @Test
     public void testsetId() {

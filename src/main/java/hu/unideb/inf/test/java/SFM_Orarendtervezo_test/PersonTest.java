@@ -8,7 +8,7 @@ import hu.unideb.inf.model.Teacher;
 import hu.unideb.inf.model.Student;
 
 
-public class TestPerson {
+public class PersonTest {
 
     @Test
     public void testSetName() {

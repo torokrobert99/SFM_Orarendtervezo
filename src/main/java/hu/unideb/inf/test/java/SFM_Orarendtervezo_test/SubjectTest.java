@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import hu.unideb.inf.model.Subject;
 import hu.unideb.inf.model.SubjectGroups;
 
-public class TestSubject {
+public class SubjectTest {
 
     @Test
     public void testgetGroups() {

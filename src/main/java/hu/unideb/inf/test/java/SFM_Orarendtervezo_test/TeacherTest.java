@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import hu.unideb.inf.model.Teacher;
 import hu.unideb.inf.model.Person;
 
-public class TestTeacher {
+public class TeacherTest {
 
     @Test
     public void testTeacher() {

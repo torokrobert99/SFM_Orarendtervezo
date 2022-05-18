@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import hu.unideb.inf.model.SubjectGroups;
 
 
-public class TestSubjectGroups {
+public class SubjectGroupsTest {
 
     @Test
     public void testgetOktato() {

@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestRegisterSceneController {
+public class RegisterSceneControllerTest {
 
     class RegisterSceneControllerAidClass{
         protected String passwordInRegister;

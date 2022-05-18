@@ -52,11 +52,11 @@
             <SepiaTone />
          </effect></Label>
       <Label alignment="CENTER" layoutX="477.0" layoutY="378.0" prefHeight="17.0" prefWidth="123.0" text="Verzió: 1.0.0" textAlignment="RIGHT" textOverrun="CLIP" />
-      <Label fx:id="errorMessage" layoutX="263.0" layoutY="335.0" prefHeight="22.0" prefWidth="77.0" text="ErrorMessage">
+      <Label fx:id="errorMessage" layoutX="168.0" layoutY="335.0" prefHeight="22.0" prefWidth="274.0" textAlignment="CENTER">
          <font>
             <Font name="Book Antiqua" size="12.0" />
          </font></Label>
-      <PasswordField layoutX="226.0" layoutY="229.0" prefHeight="28.0" prefWidth="149.0">
+      <PasswordField fx:id="passwordField" layoutX="226.0" layoutY="229.0" prefHeight="28.0" prefWidth="149.0">
          <effect>
             <Lighting diffuseConstant="1.41" specularConstant="0.0" specularExponent="0.0" surfaceScale="1.39">
                <bumpInput>
@@ -67,7 +67,7 @@
                </light>
             </Lighting>
          </effect></PasswordField>
-      <TextField layoutX="227.0" layoutY="173.0" prefHeight="28.0" prefWidth="149.0">
+      <TextField fx:id="usernameField" layoutX="227.0" layoutY="173.0" prefHeight="28.0" prefWidth="149.0">
          <effect>
             <Lighting diffuseConstant="1.41" specularConstant="0.0" specularExponent="0.0" surfaceScale="1.39">
                <bumpInput>

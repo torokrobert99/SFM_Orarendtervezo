@@ -166,7 +166,7 @@
                   </Lighting>
                </effect>
             </RadioButton>
-            <Label fx:id="errorMessage1" layoutX="330.0" layoutY="78.0" prefHeight="23.0" prefWidth="211.0" text="Hiba üzenet helye">
+            <Label fx:id="errorMessage" layoutX="274.0" layoutY="78.0" prefHeight="23.0" prefWidth="297.0">
                <font>
                   <Font name="Book Antiqua" size="18.0" />
                </font>

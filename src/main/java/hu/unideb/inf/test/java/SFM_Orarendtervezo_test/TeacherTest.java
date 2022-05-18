@@ -12,12 +12,10 @@ public class TeacherTest {
     public void testTeacher() {
         Teacher t = new Teacher();
         t.setName("Példa Péter");
-        t.setAge(21);
         t.setRole(Person.RoleType.TEACHER);
         t.setUsername("peldapeter99");
         t.setPassword("alma123");
         assertEquals("Példa Péter", t.getName());
-        assertEquals(21, t.getAge());
         assertEquals(Person.RoleType.TEACHER, t.getRole());
         assertEquals("peldapeter99", t.getUsername());
         assertEquals("alma123", t.getPassword());
@@ -28,13 +26,6 @@ public class TeacherTest {
         Teacher t = new Teacher();
         t.setName("Példa Péter");
         assertEquals("Példa Péter", t.getName());
-    }
-
-    @Test
-    public void testSetAge() {
-        Teacher t = new Teacher();
-        t.setAge(21);
-        assertEquals(21, t.getAge());
     }
 
     @Test

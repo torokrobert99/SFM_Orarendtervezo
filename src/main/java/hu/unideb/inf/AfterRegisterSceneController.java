@@ -26,7 +26,7 @@ public class AfterRegisterSceneController implements Initializable {
     @FXML
     void backToLoginButtonPushed(ActionEvent event) throws IOException {
         timeline.stop();
-        m.changeScene("/fxml/FXMLOrarendScene.fxml");
+        m.changeScene("/fxml/FXMLLoginScene.fxml");
     }
 
     /**
@@ -50,7 +50,7 @@ public class AfterRegisterSceneController implements Initializable {
         timeline = new Timeline(
                 new KeyFrame(Duration.seconds(5),actionEvent -> {
                     try {
-                        m.changeScene("/fxml/FXMLOrarendScene.fxml");
+                        m.changeScene("/fxml/FXMLLoginScene.fxml");
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

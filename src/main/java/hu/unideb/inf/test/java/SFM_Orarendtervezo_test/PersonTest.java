@@ -18,13 +18,6 @@ public class PersonTest {
     }
 
     @Test
-    public void testSetAge() {
-        Person p = new Person();
-        p.setAge(21);
-        assertEquals(21, p.getAge());
-    }
-
-    @Test
     public void testSetRole() {
         Person p = new Person();
         p.setRole(Person.RoleType.STUDENT);

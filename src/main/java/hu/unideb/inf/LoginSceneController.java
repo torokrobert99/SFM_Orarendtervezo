@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.List;
 
-public class FXMLOrarendSceneController {
+public class LoginSceneController {
     private Model model;
 
     public void setModel(Model model) {
@@ -87,7 +87,8 @@ public class FXMLOrarendSceneController {
                 validUser = true;
                 if (student.getPassword().equals(comparePassword)) {
                     compareUsername = student.getUsername();
-                    m.changeScene("/fxml/FXMLStudentMenuScene.fxml");
+                    Container.currentActivePerson = student;
+                    m.changeScene("/fxml/FXMLMenuScene.fxml");
                 }
             }
         }
@@ -96,7 +97,8 @@ public class FXMLOrarendSceneController {
                 validUser = true;
                 if (teacher.getPassword().equals(comparePassword)) {
                     compareUsername = teacher.getUsername();
-                    m.changeScene("/fxml/FXMLTeacherMenuScene.fxml");
+                    Container.currentActivePerson = teacher;
+                    m.changeScene("/fxml/FXMLMenuScene.fxml");
                 }
             }
         }

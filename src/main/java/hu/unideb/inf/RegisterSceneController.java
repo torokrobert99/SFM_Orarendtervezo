@@ -52,7 +52,7 @@ public class RegisterSceneController {
      */
     @FXML
     void cancelButtonPushed(ActionEvent event) throws IOException {
-        m.changeScene("/fxml/FXMLOrarendScene.fxml");
+        m.changeScene("/fxml/FXMLLoginScene.fxml");
 
     }
 

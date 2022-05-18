@@ -40,7 +40,7 @@ public class TargyfelvetelController implements Initializable {
     private ListView<String> timestampList;
 
     @FXML
-    private Label errorMassage;
+    private Label errorMessage;
 
     @FXML
     void backButtonPushed(ActionEvent event) throws IOException {
@@ -62,7 +62,7 @@ public class TargyfelvetelController implements Initializable {
         }
         if(bennevan)
         {
-            errorMassage.setText("Hiba! Ilyen tárgyat már vettél fel!");
+            errorMessage.setText("Hiba! Ilyen tárgyat már vettél fel!");
         }
         else
         {

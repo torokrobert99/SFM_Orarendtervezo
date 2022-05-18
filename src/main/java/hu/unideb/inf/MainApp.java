@@ -24,7 +24,7 @@ public class MainApp extends Application {
     public void start(Stage stage) throws Exception {
         stg = stage;
         //new Server().runTool("-tcp", "-web", "-ifNotExists");
-        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/FXMLOrarendScene.fxml"));
+        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/FXMLLoginScene.fxml"));
         Scene scene = new Scene(loader.load());
         stg.setTitle("Orarendtervezo");
         stg.setScene(scene);

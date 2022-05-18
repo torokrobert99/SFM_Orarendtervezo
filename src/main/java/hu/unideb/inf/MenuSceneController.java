@@ -87,8 +87,8 @@ public class MenuSceneController implements Initializable {
     }
 
     @FXML
-    void felvettTargyakButtonPushed(ActionEvent event) {
-
+    void felvettTargyakButtonPushed(ActionEvent event) throws IOException {
+        m.changeScene("/fxml/FXMLMySubjectList.fxml");
     }
 
     @FXML

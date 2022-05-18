@@ -44,7 +44,7 @@ A diagrammokat az objektumokról `DIAGRAMS.md` fájlban található vagy [itt](h
 ## 📝 Written in
 Java with Maven.
 ## 💡 Állapot
-Projekt az : _még folyamatban van_
+Projekt az : _Alpha tesztelésre kész_
 
 <!-- LICENSE -->
 ## ⚠️ Licenc

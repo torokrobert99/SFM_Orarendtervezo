@@ -49,7 +49,6 @@ public class MenuSceneController implements Initializable {
         displayName();
         if(Container.currentActivePerson.getRole().name().equals("TEACHER"))
         {
-            studentMentettOrarendek.setDisable(true);
             strudentTargyFelvetel.setDisable(true);
             studentFelvettTargyak.setDisable(true);
         }

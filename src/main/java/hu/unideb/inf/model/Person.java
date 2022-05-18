@@ -13,8 +13,6 @@ public class Person {
     private int id;
     @Column(name = "Name")
     private String name;
-    @Column(name = "Age")
-    private int age;
     //List<Student> listOfStudents = new ArrayList<>();
     @Enumerated(EnumType.STRING)
     private Person.RoleType role;
@@ -22,9 +20,6 @@ public class Person {
     public enum RoleType{
         STUDENT,TEACHER
     }
-
-
-
 
     public int getId() {
         return id;
@@ -40,14 +35,6 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public RoleType getRole() {

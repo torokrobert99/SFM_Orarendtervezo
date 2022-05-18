@@ -23,6 +23,14 @@ public class RegisterSceneControllerTest {
     }
 
     @Test
+    public void testComparePasswordsNotEqual(){
+        RegisterSceneControllerAidClass testPasswords = new RegisterSceneControllerAidClass();
+        testPasswords.confirmpasswordInRegister = "Alma1234";
+        testPasswords.passwordInRegister = "alma12345";
+        assertFalse(testPasswords.passwordInRegister.equals(testPasswords.confirmpasswordInRegister));
+    }
+
+    @Test
     public void testIsUserNameTaken() {
         RegisterSceneControllerAidClass userNamesTester = new RegisterSceneControllerAidClass();
         List<String> userNames = new ArrayList<>();

@@ -1,6 +1,7 @@
 package hu.unideb.inf.test.java.SFM_Orarendtervezo_test;
 
 
+import hu.unideb.inf.model.Subject;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import hu.unideb.inf.model.SubjectGroups;

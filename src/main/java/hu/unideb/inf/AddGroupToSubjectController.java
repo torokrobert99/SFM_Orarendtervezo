@@ -54,9 +54,8 @@ public class AddGroupToSubjectController implements Initializable {
         daysMenu.getItems().addAll(days);
         List<Integer> times = new ArrayList<>(Arrays.asList(8,10,12,14,16,18));
         timesMenu.getItems().addAll(times);
-
-
     }
+    
     @FXML
     void addGroupButtonPushed(ActionEvent event) throws IOException {
         List<Subject> subjects = subjectDAO.getSubjects();
@@ -108,7 +107,4 @@ public class AddGroupToSubjectController implements Initializable {
         }
         return false;
     }
-
-
-
 }

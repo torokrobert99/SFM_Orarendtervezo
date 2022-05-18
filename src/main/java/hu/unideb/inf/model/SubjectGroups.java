@@ -11,6 +11,11 @@ public class SubjectGroups {
     @GeneratedValue
     private int id;
 
+    @Override
+    public String toString() {
+        return nap + " " + idopont +" órától" + " " + oktato;
+    }
+
     @ManyToOne
     private Subject subject;
     private String oktato;

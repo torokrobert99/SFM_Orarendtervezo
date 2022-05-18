@@ -28,7 +28,17 @@
                <font>
                   <Font name="Book Antiqua" size="14.0" />
                </font></Label>
-            <TextField fx:id="usernameInRegister" layoutX="97.0" layoutY="172.0" prefHeight="25.0" prefWidth="121.0" />
+            <TextField fx:id="usernameInRegister" layoutX="97.0" layoutY="172.0" prefHeight="25.0" prefWidth="121.0">
+               <effect>
+                  <Lighting diffuseConstant="1.3" specularConstant="0.0" specularExponent="14.94" surfaceScale="1.85">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></TextField>
             <Label layoutX="97.0" layoutY="269.0" text="Jelszó ismét">
                <font>
                   <Font name="Book Antiqua" size="14.0" />
@@ -92,10 +102,50 @@
                <font>
                   <Font name="Book Antiqua" size="14.0" />
                </font></Button>
-            <PasswordField fx:id="passwordInRegister" layoutX="97.0" layoutY="228.0" prefHeight="25.0" prefWidth="121.0" />
-            <PasswordField fx:id="confirmpasswordInRegister" layoutX="97.0" layoutY="286.0" prefHeight="25.0" prefWidth="121.0" />
-            <TextField fx:id="secondnameTextField" layoutX="99.0" layoutY="77.0" prefHeight="25.0" prefWidth="118.0" />
-            <TextField fx:id="firstnameTextField" layoutX="97.0" layoutY="119.0" prefHeight="25.0" prefWidth="120.0" />
+            <PasswordField fx:id="passwordInRegister" layoutX="97.0" layoutY="228.0" prefHeight="25.0" prefWidth="121.0">
+               <effect>
+                  <Lighting diffuseConstant="1.3" specularConstant="0.0" specularExponent="14.94" surfaceScale="1.85">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></PasswordField>
+            <PasswordField fx:id="confirmpasswordInRegister" layoutX="97.0" layoutY="286.0" prefHeight="25.0" prefWidth="121.0">
+               <effect>
+                  <Lighting diffuseConstant="1.3" specularConstant="0.0" specularExponent="14.94" surfaceScale="1.85">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></PasswordField>
+            <TextField fx:id="secondnameTextField" layoutX="99.0" layoutY="77.0" prefHeight="25.0" prefWidth="118.0">
+               <effect>
+                  <Lighting diffuseConstant="1.3" specularConstant="0.0" specularExponent="14.94" surfaceScale="1.85">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></TextField>
+            <TextField fx:id="firstnameTextField" layoutX="97.0" layoutY="119.0" prefHeight="25.0" prefWidth="120.0">
+               <effect>
+                  <Lighting diffuseConstant="1.3" specularConstant="0.0" specularExponent="14.94" surfaceScale="1.85">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></TextField>
             <Label layoutX="95.0" layoutY="60.0" text="Vezetéknév">
                <font>
                   <Font name="Book Antiqua" size="14.0" />

@@ -7,6 +7,7 @@
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -55,8 +56,28 @@
          <font>
             <Font name="Book Antiqua" size="12.0" />
          </font></Label>
-      <PasswordField layoutX="226.0" layoutY="229.0" prefHeight="28.0" prefWidth="149.0" />
-      <TextField layoutX="227.0" layoutY="173.0" prefHeight="28.0" prefWidth="149.0" />
+      <PasswordField layoutX="226.0" layoutY="229.0" prefHeight="28.0" prefWidth="149.0">
+         <effect>
+            <Lighting diffuseConstant="1.41" specularConstant="0.0" specularExponent="0.0" surfaceScale="1.39">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></PasswordField>
+      <TextField layoutX="227.0" layoutY="173.0" prefHeight="28.0" prefWidth="149.0">
+         <effect>
+            <Lighting diffuseConstant="1.41" specularConstant="0.0" specularExponent="0.0" surfaceScale="1.39">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></TextField>
       <ImageView fitHeight="105.0" fitWidth="344.0" layoutX="143.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/logo.png" />

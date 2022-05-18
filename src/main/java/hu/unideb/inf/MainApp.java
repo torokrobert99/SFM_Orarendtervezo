@@ -73,14 +73,11 @@ public class MainApp extends Application {
             school.setName("Debreceni Egyetem");
             school.getPersons().add(a);
             aDAO.saveSchool(school);
-
-            
         } catch (Exception e) {
             e.printStackTrace();
         } */
         launch(args);
 
-        //valami
     }
 
     private static void startDatabase() throws SQLException {

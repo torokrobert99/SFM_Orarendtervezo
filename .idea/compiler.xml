@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Orarendtervezo" />
+        <module name="SFM_Orarendtervezo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Orarendtervezo" target="1.8" />
+      <module name="SFM_Orarendtervezo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

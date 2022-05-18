@@ -13,7 +13,7 @@ public class TestRegisterSceneController {
         protected String confirmpasswordInRegister;
         protected String userNameInRegister;
     }
-
+    //azonos jelszoteszteles
     @Test
     public void testComparePasswords() {
         RegisterSceneControllerAidClass testPasswords = new RegisterSceneControllerAidClass();

@@ -73,7 +73,6 @@ public class TargyfelvetelController implements Initializable {
             felvettTargy.setNap(tokens[0]);
             felvettTargy.setOra(tokens[1]);
             MysubjectsDAO.saveMySubjects(felvettTargy);
-            //mySubjectsList.getItems().addAll(felvettTargy.getSubject());
         }
         }
 

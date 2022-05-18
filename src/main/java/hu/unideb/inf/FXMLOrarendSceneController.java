@@ -22,7 +22,7 @@ public class FXMLOrarendSceneController {
         this.model = model;
     }
 
-    JpaPersonDAO personDAO = new JpaPersonDAO();
+    //JpaPersonDAO personDAO = new JpaPersonDAO();
     JpaTeacherDAO teacherDAO = new JpaTeacherDAO();
     JpaStudentDAO studentDAO = new JpaStudentDAO();
     MainApp m = new MainApp();

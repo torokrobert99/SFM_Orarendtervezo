@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
 import javax.swing.event.ChangeEvent;
@@ -39,21 +40,44 @@ public class TargyfelvetelController implements Initializable {
     private ListView<String> timestampList;
 
     @FXML
+    private Label errorMassage;
+
+    @FXML
     void backButtonPushed(ActionEvent event) throws IOException {
         m.changeScene("/fxml/FXMLMenuScene.fxml");
     }
 
     @FXML
-    void felveszButtonPushed(ActionEvent event) throws IOException {
-        MySubjects felvettTargy = new MySubjects();
-        felvettTargy.setStudent_id(Container.currentActivePerson.getId());
-        felvettTargy.setSubject(currentSubject[0]);
-        String[]tokens = currentGroup[0].split(" ");
-        felvettTargy.setNap(tokens[0]);
-        felvettTargy.setOra(tokens[1]);
-        MysubjectsDAO.saveMySubjects(felvettTargy);
-        //mySubjectsList.getItems().addAll(felvettTargy.getSubject());
-    }
+    void felveszButtonPushed(ActionEvent event) throws IOException
+    {
+        List<MySubjects> exist = MysubjectsDAO.getMySubjects();
+        boolean bennevan = false;
+
+        for (MySubjects i:exist)
+        {
+            if(Container.currentActivePerson.getId() == i.getStudent_id() && i.getSubject().equals(currentSubject[0]))
+            {
+                bennevan = true;
+            }
+        }
+        if(bennevan)
+        {
+            errorMassage.setText("Hiba! Ilyen tárgyat már vettél fel!");
+        }
+        else
+        {
+            MySubjects felvettTargy = new MySubjects();
+            felvettTargy.setStudent_id(Container.currentActivePerson.getId());
+            felvettTargy.setSubject(currentSubject[0]);
+            String[]tokens = currentGroup[0].split(" ");
+            felvettTargy.setNap(tokens[0]);
+            felvettTargy.setOra(tokens[1]);
+            MysubjectsDAO.saveMySubjects(felvettTargy);
+            //mySubjectsList.getItems().addAll(felvettTargy.getSubject());
+        }
+        }
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -65,7 +89,11 @@ public class TargyfelvetelController implements Initializable {
 
         for (MySubjects mys : my)
         {
-            mySubjs.add(mys.getSubject());
+            if(Container.currentActivePerson.getId() == mys.getStudent_id())
+            {
+                mySubjs.add(mys.getSubject());
+            }
+
         }
 
         mySubjectsList.getItems().addAll(mySubjs);

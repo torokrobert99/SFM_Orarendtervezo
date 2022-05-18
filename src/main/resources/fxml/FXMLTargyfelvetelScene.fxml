@@ -84,7 +84,7 @@
                   <Font size="22.0" />
                </font>
             </Button>
-            <Label prefHeight="90.0" prefWidth="214.0" text="DEV NOTE: kiválasztott tárgy esetén megjelennek az elérhető időpontok, felvesz gombal átmegy a saját tárgyaimhoz. saját tárgy csak nevet ír, de tárolja az időpontot is ID szerint." wrapText="true" GridPane.rowIndex="3" />
+            <Label fx:id="errorMassage" prefHeight="90.0" prefWidth="214.0" text="DEV NOTE: kiválasztott tárgy esetén megjelennek az elérhető időpontok, felvesz gombal átmegy a saját tárgyaimhoz. saját tárgy csak nevet ír, de tárolja az időpontot is ID szerint." wrapText="true" GridPane.rowIndex="3" />
             <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="155.0" prefWidth="392.0" text="Vissza a főmenübe" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />

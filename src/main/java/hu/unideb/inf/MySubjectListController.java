@@ -8,9 +8,7 @@ import javafx.scene.control.ListView;
 import hu.unideb.inf.model.*;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class MySubjectListController implements Initializable {
     MainApp m = new MainApp();
@@ -30,11 +28,14 @@ public class MySubjectListController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-
         List<MySubjects> data = MysubjectsDAO.getMySubjects();
-        List<String> li = new ArrayList<>();
+        Set<String> li = new HashSet();
         for (MySubjects line : data) {
-            li.add(line.getSubject() + ": " + line.getNap() +" "+ line.getOra() + ":00-");
+            if(Container.currentActivePerson.getId() == line.getStudent_id())
+            {
+                li.add(line.getSubject() + ": " + line.getNap() +" "+ line.getOra() + ":00-");
+            }
+
         }
 
         mySubjectsList.getItems().addAll(li);

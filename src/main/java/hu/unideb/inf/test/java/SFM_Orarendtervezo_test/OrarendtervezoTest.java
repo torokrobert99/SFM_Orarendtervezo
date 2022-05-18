@@ -1,4 +1,4 @@
-/*package hu.unideb.inf.test.java.SFM_Orarendtervezo_test;
+/* package hu.unideb.inf.test.java.SFM_Orarendtervezo_test;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import static org.mockito.BDDMockito.given;     //Itt az org.mockito-ra aláhúzza, később javítom.
+/* import static org.mockito.BDDMockito.given;     //Itt az org.mockito-ra aláhúzza, később javítom.
 import org.mockito.Mock;
 import static org.mockito.Mockito.*;
 import org.mockito.MockitoAnnotations;
@@ -29,4 +29,6 @@ public class TestOrarendtervezo{
     }
 
 }
-*/
+
+
+ */

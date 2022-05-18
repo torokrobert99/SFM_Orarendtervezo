@@ -6,18 +6,18 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.AddGroupToSubjectController">
    <children>
       <Label layoutX="189.0" layoutY="107.0" text="Válasz egy tárgyat:" />
       <Label layoutX="189.0" layoutY="147.0" text="Oktató:" />
       <TextField fx:id="lecturer" layoutX="321.0" layoutY="143.0" />
       <Label layoutX="189.0" layoutY="189.0" text="Nap:" />
-      <TextField fx:id="day" layoutX="321.0" layoutY="185.0" />
       <Label layoutX="188.0" layoutY="224.0" text="Óra kezdete:" />
-      <TextField fx:id="time" layoutX="321.0" layoutY="220.0" prefHeight="25.0" prefWidth="59.0" />
       <Button layoutX="188.0" layoutY="272.0" mnemonicParsing="false" onAction="#addGroupButtonPushed" text="Hozzáadás" />
       <Button layoutX="306.0" layoutY="272.0" mnemonicParsing="false" onAction="#cancelGroupButtonPushed" text="Mégse" />
       <ChoiceBox fx:id="subjectMenu" layoutX="321.0" layoutY="103.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="daysMenu" layoutX="321.0" layoutY="185.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="timesMenu" layoutX="321.0" layoutY="229.0" prefWidth="150.0" />
+      <Label fx:id="errorMessage" layoutX="225.0" layoutY="327.0" text="Error Message" />
    </children>
 </AnchorPane>

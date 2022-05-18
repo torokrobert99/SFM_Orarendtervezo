@@ -28,6 +28,11 @@ public class Subject {
         return groups;
     }
 
+    @Override
+    public String toString() {
+        return subjectName + " - " + targyfelelos;
+    }
+
     public void setGroups(SubjectGroups group) {
         groups.add(group);
     }

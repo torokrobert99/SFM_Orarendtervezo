@@ -12,10 +12,7 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class TargyfelvetelController implements Initializable {
     MainApp m = new MainApp();
@@ -55,16 +52,26 @@ public class TargyfelvetelController implements Initializable {
         felvettTargy.setNap(tokens[0]);
         felvettTargy.setOra(tokens[1]);
         MysubjectsDAO.saveMySubjects(felvettTargy);
+        //mySubjectsList.getItems().addAll(felvettTargy.getSubject());
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         List<Subject> subjects = subjectDAO.getSubjects();
         List<SubjectGroups> times = subjectGroupDAO.getSubjectGroup();
+        List<MySubjects> my = MysubjectsDAO.getMySubjects();
         List<String> subjs = new ArrayList<>();
+        Set<String> mySubjs = new HashSet<>();
+
+        for (MySubjects mys : my)
+        {
+            mySubjs.add(mys.getSubject());
+        }
+
+        mySubjectsList.getItems().addAll(mySubjs);
+
 
         for (Subject subject : subjects) {
-            //subjectList.getItems().add(subject.getSubjectName());
             subjs.add(subject.getSubjectName());
         }
 

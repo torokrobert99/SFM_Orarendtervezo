@@ -7,7 +7,7 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class JpaPersonDAO implements PersonDAO{
-
+    //EntityFWK
     private final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("br.com.fredericci.pu");
     private final EntityManager entityManager = entityManagerFactory.createEntityManager();
 

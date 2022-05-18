@@ -20,3 +20,10 @@ target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.l
 target/classes/hu/unideb/inf/RegisterSceneController.class
 target/classes/hu/unideb/inf/MainApp.class
 target/classes/hu/unideb/inf/AfterRegisterSceneController.class
+target/classes/fxml/FXMLAfterRegisterScene.fxml
+target/classes/fxml/FXMLRegisterScene.fxml
+target/classes/hu/unideb/inf/AfterRegisterSceneController.class
+target/classes/hu/unideb/inf/FXMLOrarendSceneController.class
+target/classes/hu/unideb/inf/MainApp.class
+target/classes/hu/unideb/inf/RegisterSceneController.class
+target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst

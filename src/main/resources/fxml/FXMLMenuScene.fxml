@@ -49,16 +49,41 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.MenuSceneController">
    <children>
-      <VBox alignment="TOP_RIGHT" prefHeight="400.0" prefWidth="644.0">
+      <VBox alignment="TOP_RIGHT" layoutX="-8.0" prefHeight="400.0" prefWidth="644.0">
          <children>
-            <Label text="Bejelentkezve:" />
-            <Label fx:id="loggedName" text="NÉV" />
-            <Label fx:id="role" text="SZEREP" />
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="653.0" text="Menü" textAlignment="CENTER">
-               <font>
-                  <Font name="Calibri" size="44.0" />
-               </font>
-            </Label>
+            <GridPane prefHeight="50.0" prefWidth="644.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="215.0" text="Menü" textAlignment="CENTER" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Calibri" size="44.0" />
+                     </font>
+                  </Label>
+                  <GridPane prefHeight="45.0" prefWidth="214.0" GridPane.columnIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="44.0" minHeight="0.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="44.0" minHeight="0.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="19.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="20.0" minHeight="1.0" prefHeight="6.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Bejelentkezve:" />
+                        <Label fx:id="loggedName" text="NÉV" GridPane.rowIndex="1" />
+                        <Label fx:id="role" text="SZEREP" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
             <Line endX="-3160.744873046875" endY="10.838651657104492" fill="BLACK" startX="-2521.67431640625" startY="9.717326164245605" strokeWidth="3.0" />
             <GridPane prefHeight="242.0" prefWidth="640.0">
               <columnConstraints>
@@ -66,24 +91,25 @@
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
+                <RowConstraints />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label alignment="CENTER" prefHeight="35.0" prefWidth="321.0" text="Tanároknak">
+                  <Label alignment="CENTER" prefHeight="35.0" prefWidth="321.0" text="Tanároknak" GridPane.rowIndex="1">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="35.0" prefWidth="321.0" text="Diákoknak" GridPane.columnIndex="1">
+                  <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="35.0" prefWidth="321.0" text="Diákoknak" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#addSubjectButtonPushed" prefHeight="39.0" prefWidth="305.0" text="Tárgy hozzáadás" textAlignment="CENTER" GridPane.rowIndex="1">
+                  <Button mnemonicParsing="false" onAction="#addSubjectButtonPushed" prefHeight="39.0" prefWidth="305.0" text="Tárgy hozzáadás" textAlignment="CENTER" GridPane.rowIndex="2">
                      <effect>
                         <Lighting>
                            <bumpInput>
@@ -97,7 +123,7 @@
                      <font>
                         <Font size="14.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#listSubjectButtonPushed" prefHeight="39.0" prefWidth="305.0" text="Tárgyak listája" GridPane.rowIndex="2">
+                  <Button mnemonicParsing="false" onAction="#listSubjectButtonPushed" prefHeight="39.0" prefWidth="305.0" text="Tárgyak listája" GridPane.rowIndex="3">
                      <effect>
                         <Lighting>
                            <bumpInput>
@@ -111,7 +137,7 @@
                      <font>
                         <Font size="14.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#subjectsButtonPushed" prefHeight="39.0" prefWidth="305.0" text="Tárgyaim" GridPane.rowIndex="3">
+                  <Button mnemonicParsing="false" onAction="#subjectsButtonPushed" prefHeight="39.0" prefWidth="305.0" text="Tárgyaim" GridPane.rowIndex="4">
                      <effect>
                         <Lighting>
                            <bumpInput>
@@ -125,7 +151,7 @@
                      <font>
                         <Font size="14.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="305.0" text="Button" GridPane.rowIndex="4">
+                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="305.0" text="Button" GridPane.rowIndex="5">
                      <effect>
                         <Lighting>
                            <bumpInput>
@@ -139,7 +165,7 @@
                      <font>
                         <Font size="14.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#targyFelvetelButtonPushed" prefHeight="39.0" prefWidth="305.0" text="Tárgy felvétel" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button mnemonicParsing="false" onAction="#targyFelvetelButtonPushed" prefHeight="39.0" prefWidth="305.0" text="Tárgy felvétel" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <effect>
                         <Lighting>
                            <bumpInput>
@@ -153,7 +179,7 @@
                      <font>
                         <Font size="14.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#felvettTargyakButtonPushed" prefHeight="39.0" prefWidth="305.0" text="Felvett tárgyak" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Button mnemonicParsing="false" onAction="#felvettTargyakButtonPushed" prefHeight="39.0" prefWidth="305.0" text="Felvett tárgyak" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <effect>
                         <Lighting>
                            <bumpInput>
@@ -167,7 +193,7 @@
                      <font>
                         <Font size="14.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" onAction="#mentettOrarendekButtonPushed" prefHeight="39.0" prefWidth="305.0" text="Mentett órarendek" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <Button mnemonicParsing="false" onAction="#mentettOrarendekButtonPushed" prefHeight="39.0" prefWidth="305.0" text="Mentett órarendek" GridPane.columnIndex="1" GridPane.rowIndex="4">
                      <effect>
                         <Lighting>
                            <bumpInput>
@@ -181,7 +207,7 @@
                      <font>
                         <Font size="14.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="305.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="305.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="5">
                      <effect>
                         <Lighting>
                            <bumpInput>

@@ -40,7 +40,7 @@
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Label fx:id="errorMessage" layoutX="248.0" layoutY="342.0" text="ErrorMessage" />
+      <Label fx:id="errorMessage" layoutX="198.0" layoutY="342.0" prefHeight="17.0" prefWidth="172.0" textAlignment="CENTER" />
       <Button layoutX="201.0" layoutY="282.0" mnemonicParsing="false" onAction="#addButtonPushed" text="Hozzáadás">
          <effect>
             <Lighting>

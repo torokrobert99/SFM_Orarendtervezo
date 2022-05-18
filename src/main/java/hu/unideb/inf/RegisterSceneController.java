@@ -46,6 +46,9 @@ public class RegisterSceneController {
     @FXML
     private TextField usernameInRegister;
 
+    @FXML
+    private RadioButton termOfUseButton;
+
 
     /**
      * Visszatér a bejelentkező felülethez, ha megnyomjuk a mégse gombot
@@ -64,7 +67,7 @@ public class RegisterSceneController {
         boolean checkFields = areTextFieldsEmpty();
         boolean checkPasswords = comparePasswords();
         boolean checkUsername = isUsernameTaken();
-        if (studentButton.isSelected() && !checkPasswords && !checkFields && !checkUsername) {
+        if (studentButton.isSelected() && !checkPasswords && !checkFields && !checkUsername && termOfUseButton.isSelected()) {
             Student registerStudent = new Student();
             registerStudent.setName(secondnameTextField.getText() + " " + firstnameTextField.getText());
             registerStudent.setRole(Person.RoleType.STUDENT);
@@ -73,7 +76,7 @@ public class RegisterSceneController {
             personDAO.savePerson(registerStudent);
             changeSceneToAfterRegister();
         }
-        else if (teacherButton.isSelected()  && !checkPasswords && !checkFields && !checkUsername)
+        else if (teacherButton.isSelected()  && !checkPasswords && !checkFields && !checkUsername && termOfUseButton.isSelected())
         {
             Teacher registerTeacher = new Teacher();
             registerTeacher.setName(secondnameTextField.getText() + " " + firstnameTextField.getText());

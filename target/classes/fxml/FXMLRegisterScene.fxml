@@ -154,7 +154,7 @@
                <font>
                   <Font name="Book Antiqua" size="14.0" />
                </font></Label>
-            <RadioButton layoutX="290.0" layoutY="258.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="290.0" text="*Elfogadom a felhasználási feltételeket. ">
+            <RadioButton fx:id="termOfUseButton" layoutX="290.0" layoutY="258.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="290.0" text="*Elfogadom a felhasználási feltételeket. ">
                <effect>
                   <Lighting>
                      <bumpInput>

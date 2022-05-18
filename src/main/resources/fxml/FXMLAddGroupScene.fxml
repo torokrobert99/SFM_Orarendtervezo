@@ -101,7 +101,7 @@
                </light>
             </Lighting>
          </effect></ChoiceBox>
-      <Label fx:id="errorMessage" layoutX="255.0" layoutY="346.0" text="Error Message" />
+      <Label fx:id="errorMessage" layoutX="174.0" layoutY="349.0" prefHeight="17.0" prefWidth="269.0" textAlignment="CENTER" />
       <Label layoutX="194.0" layoutY="37.0" text="Csoport hozzáadása">
          <font>
             <Font size="24.0" />

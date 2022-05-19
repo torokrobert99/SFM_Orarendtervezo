@@ -3,6 +3,8 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/torokrobert99/SFM_Orarendtervezo?style=for-the-badge)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/torokrobert99/SFM_Orarendtervezo?style=for-the-badge)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -11,10 +13,10 @@
     <img src="./screenshots/SFM_Orarendtervezo_logo.png" alt="SFM_Orarendtervezo_logo" width="500" height="80">
   </a>
 
-  <h3 align="center">SFM_Orarendtervezo</h3>
+  <b><h3 align="center">SFM_Orarendtervezo</h3></b>
 
   <p align="center">
-    Szoftverfejlesztés mérnököknek - Projektmunka by: <span>&#8730;</span>erek
+    Szoftverfejlesztés mérnököknek - Projektmunka by: <b><span>&#8730;</span>erek</b>
     <br />
 </div>
 
@@ -31,8 +33,9 @@
 - [⭐️ Kapcsolat](#️-kapcsolat)
 
 ## ☝️ Általános információ
-Órarendtervező "alkalmazás" Java alatt, mavennel - Szoftverfejlesztés mérnököknek projekt.
-
+Órarendtervező alkalmazás Java alatt, mavennel - Szoftverfejlesztés mérnököknek projekt.<br />
+Ebben az alkalmazásban a tanárok órákat tudnak hírdetni, amelyeket a diákok fel tudnak venni és rendezni tudják a felvett óráikat.<br />
+Az órarend tervezőben a felhasználók adatai helyi számítógépen, egy adatbázisban tárolódnak el a már megtervezett órarendekkel együtt.
 ## 💻 Képernyőképek
 ![img_gif](./screenshots/img.gif)
 
@@ -48,13 +51,11 @@ Projekt az : _Alpha tesztelésre kész_
 
 <!-- LICENSE -->
 ## ⚠️ Licenc
-
 Terjesztve az MIT Licenc alatt. További információért lásd a  `LICENSE.md` -fájlban
 ## ⭐️ Kapcsolat
 Készítették: [@torokrobert99](https://github.com/torokrobert99), [@Aldora2001](https://github.com/Aldora2001), [@czegenypatrik](https://github.com/czegenypatrik), [@Xenole](https://github.com/Xenole) és [@VictorBuscsei](https://github.com/VictorBuscsei)<br>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/torokrobert99/SFM_Orarendtervezo.svg?style=for-the-badge
 [contributors-url]: https://github.com/torokrobert99/SFM_Orarendtervezo/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/torokrobert99/SFM_Orarendtervezo.svg?style=for-the-badge
